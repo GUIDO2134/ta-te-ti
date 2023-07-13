@@ -5,7 +5,6 @@ body {
     text-align: center;
     padding: 20px;
   }
-  
   h1 {
     font-size: 40px;
     margin-bottom: 30px;
@@ -13,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
   #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,24 +21,18 @@ body {
     display: flex;
     justify-content: center;
   }
-  
   td {
-    
     width: 140px;
     height: 100px;
-   
     background-color: #212529;
     border: 2px solid #343a40;
     padding: 50px;
     font-size: 40px;
     cursor: pointer;
-    
   }
-  
   td:hover {
     background-color: #343a40;
   }
-  
   button {
     display: block;
     margin: 20px auto;

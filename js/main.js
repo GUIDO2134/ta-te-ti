@@ -16,11 +16,10 @@ function makeMove(index) {
       endGame('Empate');
     } else {
       currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-      makeNPCMove();
+      setTimeout(makeNPCMove,500)
     }
   }
 }
-
 // Función para realizar un movimiento del NPC
 function makeNPCMove() {
   var emptyCells = [];
@@ -29,19 +28,16 @@ function makeNPCMove() {
       emptyCells.push(i);
     }
   }
-
   var randomIndex = Math.floor(Math.random() * emptyCells.length);
   var npcMove = emptyCells[randomIndex];
   board[npcMove] = currentPlayer;
   document.getElementsByTagName('td')[npcMove].innerText = currentPlayer;
   document.getElementsByTagName('td')[npcMove].style.cursor = 'not-allowed';
-
   if (checkWin(currentPlayer)) {
     endGame(currentPlayer + ' ha ganado');
   } else if (checkDraw()) {
     endGame('Empate');
   }
-
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
