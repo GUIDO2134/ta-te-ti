@@ -9,22 +9,32 @@ body {
   h1 {
     font-size: 40px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    max-width: 300px;
     margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
   
   td {
+    
+    width: 140px;
+    height: 100px;
+   
     background-color: #212529;
     border: 2px solid #343a40;
     padding: 50px;
     font-size: 40px;
     cursor: pointer;
+    
   }
   
   td:hover {
@@ -34,12 +44,13 @@ body {
   button {
     display: block;
     margin: 20px auto;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 20px;
     background-color: #007bff;
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 8px;
   }
   
   button:hover {
